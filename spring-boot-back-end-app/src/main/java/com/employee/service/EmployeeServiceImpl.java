@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.employee.entity.Employee;
+import com.employee.exception.EmployeeAlreadyExistException;
 import com.employee.exception.EmployeeNotFoundException;
 import com.employee.repository.EmployeeRepository;
 
@@ -17,7 +18,14 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
 	@Override
 	public Employee createEmployee(Employee employee) {
+		if(employeeAlreadyExists(employee.getEmailId())) {
+			throw new EmployeeAlreadyExistException(employee.getEmailId()+ "already exist..!");
+		}
 		return employeeRepository.save(employee);
+	}
+
+	private boolean employeeAlreadyExists(String emailId) {
+		return employeeRepository.findByEmailId(emailId).isPresent();
 	}
 
 	@Override

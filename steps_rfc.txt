@@ -20,7 +20,7 @@ Rest API's: base url = "http://localhost:9090/api/v1/employee/"
 	5. Delete: "{id}"
 
 Frontend API Details
-Application Name: react-front-end-app (Implemented using Class Component)
+Application Name: react-rfc-front-end-app (Implemented using Functional Component)
 
 Tools & Technologies:
 	1. React 18.2.x
@@ -44,10 +44,20 @@ Eniromental Setup:
 	   install
 	   
 	3. Create React App
-	   cmd: npx create-react-app react-front-end-app
+	   cmd: npx create-react-app react-rfc-front-end-app
 	   start app: npm start
+	
+	4. Install Reactjs code snippets & prettier in VS Code 
+		Click -> Extensions 
+			-> Search 
+			-> es7  -> ES7 React/Redux/GraphQL/React-Native snippets -> install first one or (check name: rodrigovallades)
+			-> prettier -> Prettier - Code formatter -> install -> click on Setting -> search save -> check format on save
 
-	4. Install Bootstrap 
+	5. Install axios for third party api communication
+		cmd: npm i axios
+		verify the dependency in package.json 
+
+	6. Install Bootstrap 
 	   1st way: 
 		take cdn from : https://getbootstrap.com/docs/5.0/getting-started/introduction/
 		insert in index.html under head tag
@@ -56,26 +66,25 @@ Eniromental Setup:
 		cmd: npm install bootstrap --save
 		verify the dependency in package.json
 		index.js: import 'bootstrap/dist/css/bootstrap.min.css'
-	
-	5. Install Reactjs code snippets & prettier in VS Code 
-		Click -> Extensions 
-			-> Search 
-			-> es7  -> ES7 React/Redux/GraphQL/React-Native snippets -> install first one or (check name: rodrigovallades)
-			-> prettier -> Prettier - Code formatter -> install -> click on Setting -> search save -> check format on save
-
-	6. Install axios for third party api communication
-		cmd: npm install axios --save
-		verify the dependency in package.json
 
 	7. Install router for navigation
 		cmd: npm install react-router-dom
 		verify the dependency in package.json
 
+	8. Install react-icons instead of using button
+		cmd: npm install react-icons
+		verify the dependency in package.json
+
 Implementations Steps:
+1. Home.js -> short cut for code snippet -> rafce
 Create a folder: components under src -> create below components under components folder
-	1. EmployeesListComponent.jsx
-	2. HeaderComponent.jsx
-	3. FooterComponent.jsx
+	2. EmployeeListComponent.js
+	   Refer table classes -> https://getbootstrap.com/docs/4.1/content/tables/
+Create a folder: common under src -> create below components under components folder
+	3. NavBar.js  -> short cut for code snippet -> rafce
+	   Refer code -> https://getbootstrap.com/docs/4.1/components/navbar/ here and use it as per our requirement.
+	   import {Link} from 'react-router-dom';
+
 	4. Configure router in app.js
 		import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 		Routes is to handle single navigation at a time.
