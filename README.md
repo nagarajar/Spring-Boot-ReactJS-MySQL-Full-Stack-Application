@@ -1,16 +1,39 @@
 Spring-Boot-React-MySQL-Full-Stack-App
 
-Backend API Details
+#Backend API Details
 Application Name: spring-boot-back-end-app
 
-Tools & Technologies: 1. Spring Boot 3.1.x 2. Spring Data JPA 3. Maven 3.11.x 4. JDK 17 5. Embedded Tomcat 10.1.x 6. MySQL Database 7. STS IDE
+Tools & Technologies:
 
-Rest API's: base url = "http://localhost:9090/api/v1/employee/" 1. Post : "create" 2. Put : "update/{id}" 3. Get : "all" 4. Get : "{id}" 5. Delete: "{id}"
+1. Spring Boot 3.1.x
+2. Spring Data JPA
+3. Maven 3.11.x
+4. JDK 17
+5. Embedded Tomcat 10.1.x
+6. MySQL Database
+7. STS IDE
 
-Frontend API Details
+Rest API's:
+base url = "http://localhost:9090/api/v1/employee/"
+
+1. Post : "create"
+2. Put : "update/{id}"
+3. Get : "all"
+4. Get : "{id}"
+5. Delete: "{id}"
+
+#Frontend API Details:
 Application Name: react-rfc-front-end-app (Implemented using Functional Component)
 
-Tools & Technologies: 1. React 18.2.x 2. JavaScript(ES6) 3. Node JS and NPM 18.12.x 4. VS Code IDE 5. Create react app CLI 6. Bootstrap 7. Axios HTTP Library
+Tools & Technologies:
+
+1. React 18.2.x
+2. JavaScript(ES6)
+3. Node JS and NPM 18.12.x
+4. VS Code IDE
+5. Create react app CLI
+6. Bootstrap
+7. Axios HTTP Library
 
 Eniromental Setup:
 
@@ -58,20 +81,24 @@ Eniromental Setup:
 Implementations Steps:
 
 1.  Home.js -> short cut for code snippet -> rafce
-    Create a folder: components under src -> create below components under components folder 2. EmployeeListComponent.js
-    Refer table classes -> https://getbootstrap.com/docs/4.1/content/tables/
-    Create a folder: common under src -> create below components under components folder 3. NavBar.js -> short cut for code snippet -> rafce
-    Refer code -> https://getbootstrap.com/docs/4.1/components/navbar/ here and use it as per our requirement.
-    import {Link} from 'react-router-dom';
 
-        4. Configure router in app.js
-        	import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-        	Routes is to handle single navigation at a time.
+Create a folder: components under src -> create below components under components folder 2. EmployeeListComponent.js
+Refer table classes -> https://getbootstrap.com/docs/4.1/content/tables/
 
-Create a folder: serices under src -> create below js under services folder 1. EmployeeService.js : Here we can call the third party rest apis like(Post, Put, Get, Delete)
-Note:
-Problem: CORS policy: No 'Access-Control-Allow-Origin'
-Solution: @CrossOrigin(origins = "http://localhost:3000") add in backed api controller class
+Create a folder: common under src -> create below components under components folder 3. NavBar.js -> short cut for code snippet -> rafce
+Refer code -> https://getbootstrap.com/docs/4.1/components/navbar/ here and use it as per our requirement.
+import {Link} from 'react-router-dom';
+
+4. Configure router in app.js
+   import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+   Routes is to handle single navigation at a time.
+
+Create a folder: serices under src -> create below js under services folder
+
+1. EmployeeService.js : Here we can call the third party rest apis like(Post, Put, Get, Delete)
+   Note:
+   Problem: CORS policy: No 'Access-Control-Allow-Origin'
+   Solution: @CrossOrigin(origins = "http://localhost:3000") add in backed api controller class
 
 Note: 1. package.json -> contains the version and dependency related information. 2. node_modules -> contains all the files related to the node js 3. Application Execution Flow: index.html -> index.js -> App.js
 
