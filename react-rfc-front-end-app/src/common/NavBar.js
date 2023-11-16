@@ -26,7 +26,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to={"add-employee"}>
+            <Link className="nav-link" to={"/add-employee"}>
               Add New Employee
             </Link>
           </li>

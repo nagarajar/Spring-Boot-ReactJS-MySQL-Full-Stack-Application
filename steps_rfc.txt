@@ -80,6 +80,8 @@ Implementations Steps:
 Create a folder: components under src -> create below components under components folder
 	2. EmployeeListComponent.js
 	   Refer table classes -> https://getbootstrap.com/docs/4.1/content/tables/
+	5. AddEmployee.js
+
 Create a folder: common under src -> create below components under components folder
 	3. NavBar.js  -> short cut for code snippet -> rafce
 	   Refer code -> https://getbootstrap.com/docs/4.1/components/navbar/ here and use it as per our requirement.
