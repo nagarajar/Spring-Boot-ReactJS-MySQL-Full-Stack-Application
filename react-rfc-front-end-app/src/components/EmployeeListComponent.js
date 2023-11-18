@@ -16,6 +16,16 @@ const EmployeeListComponent = () => {
     });
   };
 
+  const handleDelete = async (id) => {
+    await axios
+      .delete(`http://localhost:9090/api/v1/employee/${id}`)
+      .then((res) => {
+        if (res.data) {
+          loadEmployees();
+        }
+      });
+  };
+
   return (
     <section>
       <table className="table table-bordered table-hover shadow">
@@ -54,7 +64,10 @@ const EmployeeListComponent = () => {
                 </Link>
               </td>
               <td>
-                <button className="btn btn-danger">
+                <button
+                  className="btn btn-danger"
+                  onClick={() => handleDelete(employee.id)}
+                >
                   <FaTrashAlt />
                 </button>
               </td>

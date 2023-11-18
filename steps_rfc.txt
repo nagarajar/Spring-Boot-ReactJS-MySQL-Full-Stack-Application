@@ -81,6 +81,15 @@ Create a folder: components under src -> create below components under component
 	2. EmployeeListComponent.js
 	   Refer table classes -> https://getbootstrap.com/docs/4.1/content/tables/
 	5. AddEmployee.js
+	6. EditEmployee.js 
+		-> Copy the same code from the AddEmployee, change the names and url.
+		-> get the employee by id -> so call this method in useEffect.
+		-> Create a router in App.js
+		-> create a variable id with useParams() so it take dynamic variable from the url.
+	7. EmployeeProfile.js 
+		-> get the employee by id -> so call this method in useEffect.
+		-> Create a router in App.js
+		-> create a variable id with useParams() so it take dynamic variable from the url.
 
 Create a folder: common under src -> create below components under components folder
 	3. NavBar.js  -> short cut for code snippet -> rafce

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
-const AddEmployee = () => {
+const EditEmployee = () => {
   let navigate = useNavigate();
+  const { id } = useParams();
   const [employee, setEmployee] = useState({
     firstName: "",
     lastName: "",
@@ -12,14 +13,26 @@ const AddEmployee = () => {
 
   const { firstName, lastName, emailId } = employee;
 
+  useEffect(() => {
+    loadEmployee();
+  }, []);
+
+  const loadEmployee = async () => {
+    axios.get(`http://localhost:9090/api/v1/employee/${id}`).then((res) => {
+      if (res.data) {
+        setEmployee(res.data);
+      }
+    });
+  };
+
   const handleInputChange = (e) => {
     setEmployee({ ...employee, [e.target.name]: e.target.value });
   };
 
-  const saveEmployee = async (e) => {
+  const updateEmployee = async (e) => {
     e.preventDefault();
     await axios
-      .post("http://localhost:9090/api/v1/employee/create", employee)
+      .put(`http://localhost:9090/api/v1/employee/update/${id}`, employee)
       .then((res) => {
         if (res.data) {
           navigate("/view-employees");
@@ -29,9 +42,9 @@ const AddEmployee = () => {
 
   return (
     <div className="col-sm-8 py-2 px-5 offset-2 shadow">
-      <h2 className="text-center mt-2 mb-2">Add Employee</h2>
+      <h2 className="text-center mt-2 mb-2">Update Employee</h2>
       <hr></hr>
-      <form onSubmit={(e) => saveEmployee(e)}>
+      <form onSubmit={(e) => updateEmployee(e)}>
         <div className="input-group mb-5">
           <label className="input-group-text" htmlFor="firstName">
             First Name
@@ -98,4 +111,4 @@ const AddEmployee = () => {
   );
 };
 
-export default AddEmployee;
+export default EditEmployee;
