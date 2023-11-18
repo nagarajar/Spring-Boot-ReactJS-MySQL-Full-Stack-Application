@@ -1,5 +1,33 @@
 # Spring-Boot-React-MySQL-Full-Stack-App
 
+## Home Page
+
+![Home Page](/assets/Home.jpeg)
+
+## View Employees
+
+> (Without using react-data-table)
+
+![Employees](/assets/Employees.jpeg)
+
+## View Employees Data Table
+
+> (Using react-data-table)
+
+![Employees Data Table](/assets/Employees_DT.jpeg)
+
+## View Employee Profile
+
+![View Employee Profile](/assets/Employee_Profile.jpeg)
+
+## Update Employee
+
+![Update Employee](/assets/Update.jpeg)
+
+## Add Employee
+
+![Add Employee](/assets/Add.jpeg)
+
 ## Backend API Details
 
 ### Application Name: `spring-boot-back-end-app`
@@ -107,8 +135,11 @@
 ## Implementations Steps:
 
 1. Home.js -> short cut for code snippet -> rafce
-   > Create a folder: components under src -> create below components under components folder
+
+> Create a folder: components under src -> create below components under components folder
+
 2. EmployeeListComponent.js
+
    - Refer table classes -> [Bootstrap Tables](https://getbootstrap.com/docs/4.1/content/tables/)
 
 > Create a folder: common under src -> create below components under components folder
