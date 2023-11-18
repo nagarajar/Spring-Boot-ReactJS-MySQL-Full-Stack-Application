@@ -22,7 +22,7 @@ const AddEmployee = () => {
       .post("http://localhost:9090/api/v1/employee/create", employee)
       .then((res) => {
         if (res.data) {
-          navigate("/view-employees");
+          navigate("/view-employees-data-table");
         }
       });
   };
@@ -85,7 +85,7 @@ const AddEmployee = () => {
           </div>
           <div className="col-sm-2">
             <Link
-              to={"/view-employees"}
+              to={"/view-employees-data-table"}
               type="submit"
               className="btn btn-outline-warning btn-lg"
             >

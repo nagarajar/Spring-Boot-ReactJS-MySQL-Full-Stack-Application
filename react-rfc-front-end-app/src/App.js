@@ -6,6 +6,7 @@ import EditEmployee from "./components/EditEmployee";
 import EmployeeListComponent from "./components/EmployeeListComponent";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import EmployeeProfile from "./components/EmployeeProfile";
+import EmployeeListDataTable from "./components/EmployeeListDataTable";
 
 function App() {
   return (
@@ -18,6 +19,11 @@ function App() {
             exact
             path="/view-employees"
             element={<EmployeeListComponent />}
+          ></Route>
+          <Route
+            exact
+            path="/view-employees-data-table"
+            element={<EmployeeListDataTable />}
           ></Route>
           <Route exact path="/add-employee" element={<AddEmployee />}></Route>
           <Route

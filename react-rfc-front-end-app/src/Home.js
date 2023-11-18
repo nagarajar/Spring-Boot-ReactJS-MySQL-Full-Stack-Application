@@ -13,14 +13,21 @@ const Home = () => {
                 <div className="card-body">
                   <h5 className="card-title">Employee List</h5>
                   <p className="card-text">
-                    To view the list of employees, click on "View All Employees"
-                    in Navigation Bar. Else click on below button.
+                    To view the list of employees, click on "Employees or
+                    Employes Data Table" in Navigation Bar. Else click on below
+                    button.
                   </p>
                   <Link
                     to={"/view-employees"}
                     className="btn btn-outline-primary"
                   >
-                    View All Employees
+                    Employees
+                  </Link>
+                  <Link
+                    to={"/view-employees-data-table"}
+                    className="btn btn-outline-primary ms-2"
+                  >
+                    Employees Data Table
                   </Link>
                 </div>
               </div>
@@ -30,14 +37,14 @@ const Home = () => {
                 <div className="card-body">
                   <h5 className="card-title">Add Employee</h5>
                   <p className="card-text">
-                    To create a new employee, click on "Add New Employee" in
+                    To create a new employee, click on "Add Employee" in
                     Navigation Bar. Else click on below button.
                   </p>
                   <Link
                     to={"/add-employee"}
                     className="btn btn-outline-success"
                   >
-                    Add New Employee
+                    Add Employee
                   </Link>
                 </div>
               </div>

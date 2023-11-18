@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const EmployeeProfile = () => {
   const { id } = useParams();
@@ -24,46 +24,6 @@ const EmployeeProfile = () => {
         }
       });
   };
-
-  //   return (
-  //     <section>
-  //       <div className="container">
-  //         <h2 className="text-center mb-4">Employee Profile Details</h2>
-  //         <div className="card">
-  //           <div className="card-body">
-  //             <div className="row">
-  //               <div className="col-sm-3">
-  //                 <h5 className="mb-0">First Name</h5>
-  //               </div>
-
-  //               <div className="col-sm-9">
-  //                 <p className="text-muted mb-0">{employee.firstName}</p>
-  //               </div>
-  //             </div>
-  //             <hr />
-  //             <div className="row">
-  //               <div className="col-sm-3">
-  //                 <h5 className="mb-0">Last Name</h5>
-  //               </div>
-
-  //               <div className="col-sm-9">
-  //                 <p className="text-muted mb-0">{employee.lastName}</p>
-  //               </div>
-  //             </div>
-  //             <hr />
-  //             <div className="row">
-  //               <div className="col-sm-3">
-  //                 <h5 className="mb-0">Email</h5>
-  //               </div>
-  //               <div className="col-sm-9">
-  //                 <p className="text-muted mb-0">{employee.emailId}</p>
-  //               </div>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </section>
-  //   );
 
   return (
     <div className="container">
@@ -124,6 +84,15 @@ const EmployeeProfile = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="d-flex justify-content-end">
+        <Link
+          to={"/view-employees-data-table"}
+          type="submit"
+          className="btn btn-outline-warning btn-lg"
+        >
+          Back
+        </Link>
       </div>
     </div>
   );

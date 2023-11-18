@@ -30,6 +30,9 @@ Tools & Technologies:
 	5. Create react app CLI
 	6. Bootstrap
 	7. Axios HTTP Library
+	8. React-router-dom
+	9. React-icons
+	10. React-data-table-component
 
 
 Eniromental Setup: 
@@ -75,6 +78,10 @@ Eniromental Setup:
 		cmd: npm install react-icons
 		verify the dependency in package.json
 
+	9. Install react-data-table-component
+		cmd: npm i react-data-table-component
+		verify the dependency in package.json
+
 Implementations Steps:
 1. Home.js -> short cut for code snippet -> rafce
 Create a folder: components under src -> create below components under components folder
@@ -90,6 +97,12 @@ Create a folder: components under src -> create below components under component
 		-> get the employee by id -> so call this method in useEffect.
 		-> Create a router in App.js
 		-> create a variable id with useParams() so it take dynamic variable from the url.
+	8. EmployeeListDataTable.js 
+		-> Need to implement search, pagination, sorting functionality for employee list table.
+		-> React provided the data table dependency so will use it.
+			- https://www.npmjs.com/package/react-data-table-component
+			- https://www.youtube.com/watch?v=1dDK_N909Xo&list=PLKY8itN_9uQ1UIJk-ymhOx4oiFCwwW7cn&index=1
+			- https://youtu.be/aveI4Mj11tc?si=99EtEf3lIsA3kDag
 
 Create a folder: common under src -> create below components under components folder
 	3. NavBar.js  -> short cut for code snippet -> rafce
