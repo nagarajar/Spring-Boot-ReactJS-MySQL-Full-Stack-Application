@@ -1,5 +1,9 @@
 # Spring-Boot-React-MySQL-Full-Stack-App
 
+## Application Architecture
+
+![Application Architecture](/assets/architecture.png)
+
 ## Home Page
 
 ![Home Page](/assets/Home.jpeg)
